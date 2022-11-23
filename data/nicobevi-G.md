@@ -414,3 +414,12 @@ Also there are some changes to be made on `Turnstile.t.sol`
 * Line 45 should be changed from `assertEq(turnstile.currentCounterId(), i);` to `assertEq(turnstile.currentCounterId(), i + 1);`
 * Line 88 should be changed from `assertEq(currentCounterId, 0);` to `assertEq(currentCounterId, 1);`
 * Line 138 should be changed from ` assertEq(turnstile.currentCounterId(), 1);` to ` assertEq(turnstile.currentCounterId(), 2);`
+
+## Replace ERC721Enumerable.sol import with the standard ERC721 implementation.
+
+The ERC721Enumerable.sol is a heavy implementation that adds some features to the contract that are not being used anywhere. Consider to replace it completly and use the standard ERC721 implementation instead
+
+That will have a huge impact on gas consumption (13441006 gas units saved on tests).
+
+### Changes
+Replace `import "openzeppelin/token/ERC721/extensions/ERC721Enumerable.sol";` with `import "openzeppelin/token/ERC721/ERC721.sol"` and replace the inheritance from `ERC721Enumerable` to `ERC721`.
