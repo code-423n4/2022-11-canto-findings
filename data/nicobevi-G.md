@@ -101,3 +101,33 @@
   ```
 
 Those changes will save 17082 gas units on tests.
+
+## Avoid double storage reading on `getTokenId()`
+
+`reeRecipient[_smartContract]` is being read twice from storage (one on `isRegistered()` call and the other one on the return expresion) unnecesarly wasting gas.
+
+### Where
+
+https://github.com/code-423n4/2022-11-canto/blob/f6908b3453560ec25f2362741b3287fa312a3ff7/CIP-001/src/Turnstile.sol#L68-L72
+
+```solidity
+function getTokenId(address _smartContract) external view returns (uint256) {
+    if (!isRegistered(_smartContract)) revert Unregistered();
+
+    return feeRecipient[_smartContract].tokenId;
+}
+```
+
+Change the code to
+
+```solidity
+function getTokenId(address _smartContract) external view returns (uint256) {
+    NftData memory data = feeRecipient[_smartContract];
+    
+    if (!data.registered) revert Unregistered();
+
+    return data.tokenId;
+}
+```
+
+That will save more than 22000 gas units.
