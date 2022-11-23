@@ -131,3 +131,82 @@ function getTokenId(address _smartContract) external view returns (uint256) {
 ```
 
 That will save more than 22000 gas units.
+
+
+## Use unchecked on safe arithmetic operations
+
+### Where
+
+* https://github.com/code-423n4/2022-11-canto/blob/f6908b3453560ec25f2362741b3287fa312a3ff7/CIP-001/  src/Turnstile.sol#L137
+
+  ```solidity
+    function withdraw(uint256 _tokenId, address payable _recipient, uint256 _amount)
+        public
+        onlyNftOwner(_tokenId)
+        returns (uint256)
+    {
+        uint256 earnedFees = balances[_tokenId];
+
+        if (earnedFees == 0 || _amount == 0) revert NothingToWithdraw();
+        if (_amount > earnedFees) _amount = earnedFees;
+
+        balances[_tokenId] = earnedFees - _amount;
+
+        emit Withdraw(_tokenId, _recipient, _amount);
+
+        Address.sendValue(_recipient, _amount);
+
+        return _amount;
+    }
+  ```
+
+  Change the code to
+
+  ```solidity
+    function withdraw(uint256 _tokenId, address payable _recipient, uint256 _amount)
+        public
+        onlyNftOwner(_tokenId)
+        returns (uint256)
+    {
+        uint256 earnedFees = balances[_tokenId];
+
+        if (earnedFees == 0 || _amount == 0) revert NothingToWithdraw();
+
+        if (_amount > earnedFees) _amount = earnedFees;
+
+        unchecked {
+          balances[_tokenId] = earnedFees - _amount;
+        }
+
+        emit Withdraw(_tokenId, _recipient, _amount);
+
+        Address.sendValue(_recipient, _amount);
+
+        return _amount;
+    }
+  ```
+
+* https://github.com/code-423n4/2022-11-canto/blob/f6908b3453560ec25f2362741b3287fa312a3ff7/CIP-001/src/Turnstile.sol#L137
+
+  ```solidity
+    function distributeFees(uint256 _tokenId) public onlyOwner payable {
+        if (msg.value == 0) revert NothingToDistribute();
+
+        balances[_tokenId] += msg.value;
+        emit DistributeFees(_tokenId, msg.value);
+    }
+  ```
+
+  Change the code to
+
+  ```solidity
+    function distributeFees(uint256 _tokenId) public onlyOwner payable {
+        if (msg.value == 0) revert NothingToDistribute();
+
+        unchecked {
+          balances[_tokenId] += msg.value;
+        }
+
+        emit DistributeFees(_tokenId, msg.value);
+    }
+  ```
