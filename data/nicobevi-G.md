@@ -210,3 +210,9 @@ That will save more than 22000 gas units.
         emit DistributeFees(_tokenId, msg.value);
     }
   ```
+
+## Remove `onlyNftOwner` only used one and move the validation to the function `withdraw()`
+
+If the modifier is used just once then the logic can be moved to the callee function instead and save some gas.
+
+That will save 37 gas units.
