@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "nicobevi",
+  "risk": "2",
+  "title": "Fees could be assigned to an inexising Nft Id and being locked forever on the contract",
+  "issueId": 12,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/12"
+}
