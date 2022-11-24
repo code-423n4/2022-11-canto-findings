@@ -17,3 +17,12 @@ Defining the varaible ``registered`` as uint256 can save gas for two reasons: 1)
     }
 
 ```
+
+G3. https://github.com/code-423n4/2022-11-canto/blob/2733fdd1bee73a6871c6243f92a007a0b80e4c61/CIP-001/src/Turnstile.sol#L134
+Check whether ``amount == 0`` separately in the first line to save gas - we can avoid reading the state variable when it is equal to zero.
+
+G4. https://github.com/code-423n4/2022-11-canto/blob/2733fdd1bee73a6871c6243f92a007a0b80e4c61/CIP-001/src/Turnstile.sol#L151
+Change line 151 to the following to save gas:
+```
+ balances[_tokenId] = balances[_tokenId] + msg.value;
+``` 
