@@ -10,8 +10,8 @@ I found 3 different changes that can reduce gas usage for Turnstile.sol
 
 The two branches can be found here:
 
-- `https://github.com/beepidibop/2022-11-canto/tree/dev/gas-savings`
-- `https://github.com/beepidibop/2022-11-canto/tree/dev/gas-savings-with-struct-change`
+- https://github.com/beepidibop/2022-11-canto/tree/dev/gas-savings
+- https://github.com/beepidibop/2022-11-canto/tree/dev/gas-savings-with-struct-change
 
 Here are the gas reports:
 
