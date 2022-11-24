@@ -17,6 +17,7 @@ Defining the varaible ``registered`` as uint256 can save gas for two reasons: 1)
     }
 
 ```
+Or we can simply drop the variable ``registered``, if feeRecipient[contract] != 0 then we know it is not registered since there is an NFTid associated with the contract. Let the first NFTid = 1.
 
 G3. https://github.com/code-423n4/2022-11-canto/blob/2733fdd1bee73a6871c6243f92a007a0b80e4c61/CIP-001/src/Turnstile.sol#L134
 Check whether ``amount == 0`` separately in the first line to save gas - we can avoid reading the state variable when it is equal to zero.
@@ -26,3 +27,16 @@ Change line 151 to the following to save gas:
 ```
  balances[_tokenId] = balances[_tokenId] + msg.value;
 ``` 
+
+G5. https://github.com/code-423n4/2022-11-canto/blob/2733fdd1bee73a6871c6243f92a007a0b80e4c61/CIP-001/src/Turnstile.sol#L137
+No need to check overflow, so use unchecked can save gas.
+```
+unchecked{ balances[_tokenId] = earnedFees - _amount;}
+```
+
+G6. https://github.com/code-423n4/2022-11-canto/blob/2733fdd1bee73a6871c6243f92a007a0b80e4c61/CIP-001/src/Turnstile.sol#L151
+use unchecked to save gas. impossible to overflow here
+```
+ unchecked{balances[_tokenId]  = balances[_tokenId]+msg.value;
+```
+
