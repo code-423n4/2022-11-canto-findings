@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "datapunk",
+  "risk": "3",
+  "title": "any address which is not registered can call assign(), including EOA ",
+  "issueId": 22,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/22"
+}
