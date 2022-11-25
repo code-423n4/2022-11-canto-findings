@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "AkshaySrivastav",
+  "risk": "2",
+  "title": "Ambiguous contract state for accounts holding multiple NFTs.",
+  "issueId": 29,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/29"
+}
