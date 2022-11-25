@@ -1,0 +1,1 @@
+In the `register` function `ERC721._mint` function is used for minting a new NFT. Since the Canto protocol expects the `_recipient` to be a smart contract, `ERC721._safeMint` should be used.
