@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "rvierdiiev",
+  "risk": "2",
+  "title": "Turnstile.distributeFees doesn't check if nft exists",
+  "issueId": 46,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/46"
+}
