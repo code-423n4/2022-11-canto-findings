@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "koxuan",
+  "risk": "2",
+  "title": "smart contracts that do not support erc721 will cause loss of nft",
+  "issueId": 21,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/21"
+}
