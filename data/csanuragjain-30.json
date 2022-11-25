@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "csanuragjain",
+  "risk": "3",
+  "title": "Nonce is not updated after EVM Transaction",
+  "issueId": 30,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/30"
+}
