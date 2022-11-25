@@ -18,6 +18,8 @@ https://github.com/code-423n4/2022-11-canto/blob/main/CIP-001/src/Turnstile.sol
 
 ### G-02 `<x> += <y>` costs more gas than `<x> = <x> + <y>` for state variables
 
+_There are **1** instances of this issue:_
+
 ```solidity
 File: /src/Turnstile.sol
 
