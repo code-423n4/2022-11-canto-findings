@@ -1,0 +1,1 @@
+Instead of boolean use uint in struct as it is more gas efficient.
