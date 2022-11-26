@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "hihen",
+  "risk": "2",
+  "title": "The check for msg.value in distributeFees is unnecessary and may cause error",
+  "issueId": 57,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/57"
+}
