@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "hihen",
+  "risk": "3",
+  "title": "Incorrect revenue calculation will lead to revenue theft through proxy attacks",
+  "issueId": 51,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/51"
+}
