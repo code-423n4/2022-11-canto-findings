@@ -1,5 +1,7 @@
 ##   [G1]  _tokenIdTracker STATE VARIBALE SHOULD BE CACHED WITH STACK VARIBALE . STACK VARIABLE GAS FEE IS VERY LOW COMPARE TO ACCESSING ON CHAIN DATA 
 
+There are 2 instances of this issue:
+
 >  FILE :  2022-11-canto/CIP-001/src/Turnstile.sol
 
           91:  tokenId = _tokenIdTracker.current();
@@ -29,6 +31,22 @@
 >  FILE :  2022-11-canto/CIP-001/src/Turnstile.sol
 
      151:   balances[_tokenId] += msg.value;
+
+##
+
+## [G5]  Use the external Visibility Modifier
+
+     Use the external function visibility for gas optimization because the public visibility modifier is equivalent to using the external and internal visibility modifier, meaning both public and external can be called from outside of your contract, which requires more gas.
+
+There are 3 instances of this issue:
+
+>  FILE :  2022-11-canto/CIP-001/src/Turnstile.sol
+
+    148:  function distributeFees(uint256 _tokenId) public onlyOwner payable {
+
+    127:  function withdraw(uint256 _tokenId, address payable _recipient, uint256 _amount) 
+
+    107:  function assign(uint256 _tokenId) public onlyUnregistered returns (uint256) {
      
    
 
