@@ -1,4 +1,4 @@
-mac os make install not working
+mac os make install in `Canto` not working
 
 ```
 vendor/github.com/zondax/hid/hid_enabled.go:38:11: fatal error: 'hidapi/mac/hid.c' file not found
@@ -9,6 +9,4 @@ make: *** [install] Error 2
 
 ```
 
-
-arch linux make install not working
-
+`brew install hidapi` does not solve the issue.
