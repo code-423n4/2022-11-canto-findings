@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "amaechieth",
+  "risk": "2",
+  "title": "Turnstile.sol: fees should not be allowed to be withdrawn to address(0)",
+  "issueId": 76,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/76"
+}
