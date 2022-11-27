@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "8olidity",
+  "risk": "2",
+  "title": "Use _safeMint instead of _mint",
+  "issueId": 66,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/66"
+}
