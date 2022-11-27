@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "gzeon",
+  "risk": "2",
+  "title": "onlyUnregistered did not check if caller is a smart contract",
+  "issueId": 60,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/60"
+}
