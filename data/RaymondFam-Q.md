@@ -44,3 +44,17 @@ Consider reordering the above code line by moving it before line 87:
         if (_recipient == address(0)) revert InvalidRecipient();
         address smartContract = msg.sender;
 ```
+## Unneeded Cache
+Caching a global variable, `msg.sender` is unnecessary as it has no gas saving benefit in doing so. Having the comments denoting `msg.sender` is assumed to be a smart contract is adequate enough to remove the unneeded cache.
+
+Here are the three instances entailed:
+
+[File: Turnstile.sol](https://github.com/code-423n4/2022-11-canto/blob/main/CIP-001/src/Turnstile.sol)
+
+```
+50:        address smartContract = msg.sender;
+
+87:        address smartContract = msg.sender;
+
+108:        address smartContract = msg.sender;
+```
