@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "sorrynotsorry",
+  "risk": "2",
+  "title": "Register and assign functions need more validation due to phishing vectors.",
+  "issueId": 134,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/134"
+}
