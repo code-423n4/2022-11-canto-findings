@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "0xmuxyz",
+  "risk": "2",
+  "title": "Should use `_safeMint()` instead of using `_mint()` for ERC721",
+  "issueId": 87,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/87"
+}
