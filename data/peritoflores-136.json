@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "peritoflores",
+  "risk": "2",
+  "title": " [M2] It is possible to accidentally send ETH to an invalid token Id",
+  "issueId": 136,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/136"
+}
