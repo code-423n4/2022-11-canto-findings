@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "0xmuxyz",
+  "risk": "2",
+  "title": "Lack of input validation to check whether the `tokenId` of the NFT exists or not - this lead to misallocation of fee earned",
+  "issueId": 89,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/89"
+}
