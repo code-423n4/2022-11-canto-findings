@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "alexxander",
+  "risk": "2",
+  "title": "Inability to re-assign smart contracts to other ERC721 tokens and potential lock of ERC721 tokens due to not using safeMint().  ",
+  "issueId": 119,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/119"
+}
