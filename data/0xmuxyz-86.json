@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "0xmuxyz",
+  "risk": "3",
+  "title": "`tokenID` that is not minted will be stored into the `feeRecipient` storage",
+  "issueId": 86,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/86"
+}
