@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "cryptonue",
+  "risk": "2",
+  "title": "EOA can `register` or `assign` tokenId",
+  "issueId": 117,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/117"
+}
