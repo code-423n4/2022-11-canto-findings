@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "Aymen0909",
+  "risk": "2",
+  "title": "Existing tokens can be given to other contracts when `assign` function is called",
+  "issueId": 146,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/146"
+}
