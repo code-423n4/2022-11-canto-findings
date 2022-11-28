@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "Jeiwan",
+  "risk": "3",
+  "title": "A registered contract won't earn fees if `_recipient` is a fresh address",
+  "issueId": 93,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/93"
+}
