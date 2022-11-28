@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "bitsurfer",
+  "risk": "2",
+  "title": "`distributeFees` did not check if tokenId exist can lead to loss of asset",
+  "issueId": 88,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/88"
+}
