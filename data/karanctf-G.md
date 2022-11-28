@@ -1,5 +1,5 @@
 > * Check  `!_exists` before declaring `address smartContract = msg.sender;` on Turnstile.sol#L110
-> * Check `_ammount ==0` before declaring earnedFees 
+> * Check `_amount ==0` before declaring earnedFees 
 > 
 ```solidity
 	uint256 earnedFees = balances[_tokenId];
