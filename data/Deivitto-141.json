@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "Deivitto",
+  "risk": "3",
+  "title": "Value can be lost in `withdraw` ",
+  "issueId": 141,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/141"
+}
