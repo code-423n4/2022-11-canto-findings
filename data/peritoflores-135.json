@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "peritoflores",
+  "risk": "2",
+  "title": " [M1] Use _safeMint instead of _mint in order to prevent NFT from being locked",
+  "issueId": 135,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/135"
+}
