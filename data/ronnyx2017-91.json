@@ -1,0 +1,8 @@
+{
+  "contest": 185,
+  "handle": "ronnyx2017",
+  "risk": "2",
+  "title": "The recipient address check during handling register events will confuse users and block the users contracts registering",
+  "issueId": 91,
+  "issueUrl": "https://github.com/code-423n4/2022-11-canto-findings/issues/91"
+}
