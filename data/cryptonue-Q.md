@@ -1,3 +1,14 @@
+# [L] _SAFEMINT() SHOULD BE USED RATHER THAN _MINT() WHEREVER POSSIBLE
+
+`_mint()` is [discouraged](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/d4d8d2ed9798cc3383912a23b5e8d5cb602f7d4b/contracts/token/ERC721/ERC721.sol#L271) in favor of `_safeMint()` which ensures that the recipient is either an EOA or implements IERC721Receiver. Both `OpenZeppelin` and `solmate` have versions of this function
+
+```solidity
+File: Turnstile.sol
+92:         _mint(_recipient, tokenId);
+```
+
+
+
 # [L] USE TWO-PHASE OWNERSHIP TRANSFERS
 
 `Turnstile.sol` using Ownable contract from `openzeppelin/access/Ownable.sol` which doesn't include an accept function for accepting the transfer ownership.
